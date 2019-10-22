@@ -1,0 +1,31 @@
+-
+	var description_ru = 'Бесплатный анонимный файлообменник'; 
+	var description_en = 'Free anonymous file sharing';
+
+	var title = 'Fylik - Free anonymous file sharing';
+
+//- === === === === ===
+//- HTML
+//- === === === === ===
+
+<!DOCTYPE html>
+html
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no")
+
+		title #{title}
+
+		//- === === === === ===
+		//- Little SEO
+		//- === === === === ===
+
+		meta(name="description", lang="ru", content=description_ru)
+		meta(name="description", lang="en", content=description_en)
+
+		meta(property="og:title", content=title)
+		meta(property="og:description", content=description_en)
+		meta(property="og:image", content='https://fylik.ru/img/poster.jpg')
+
+	body
+		#app

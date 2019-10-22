@@ -1,0 +1,59 @@
+#home {
+
+	/* === === === === === */
+	/* Files
+	/* === === === === === */
+
+	#files {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+		grid-gap: 25px;
+		margin-top: 50px;
+		align-items: flex-start;
+
+		.file {
+			position: relative;
+			background: @white;
+			padding: 25px 20px;
+			text-align: center;
+			cursor: pointer;
+
+			&-icon {
+				font-size: 48px;
+
+				svg {
+					width: 70px;
+					height: 70px;
+				}
+			}
+
+			&-name {
+				margin-top: 20px;
+				font: bold 14pt @majorFont;
+				word-wrap: break-word;
+				transition: .18s;
+			}
+
+			&:hover {
+				.file-name {
+					color: @red500;
+				}
+			}
+
+			&-size {
+				margin-top: 4px;
+				font: 10pt @majorFont;
+				color: @black700;
+			}
+
+			&-term {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 70%;
+				height: 2px;
+				transition: width 1s linear;
+			}
+		}
+	}
+}

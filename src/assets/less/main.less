@@ -1,0 +1,49 @@
+@import "vars";
+
+* {
+	box-sizing: border-box;
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+	background: rgba(@black, .2);
+}
+
+html, body, #app{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	user-select: none;
+}
+
+body {
+	font: 1em @majorFont;
+}
+
+/* === === === === === */
+/* Imports
+/* === === === === === */
+
+@import "inputs";
+@import "vue-transitions";
+
+@import "classes";
+
+/* === === === === === */
+/* App
+/* === === === === === */
+
+#app {
+	position: relative;
+	display: flex;
+	background: @black200;
+	overflow: auto;
+	padding: 100px 0;
+	z-index: 5000;
+
+	@import "blocks/header-footer";
+	@import "blocks/main";
+
+}

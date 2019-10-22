@@ -1,0 +1,37 @@
+input, button {
+	display: block;
+	background: @black200;
+	border: none;
+	font: bold 1em @majorFont;
+	padding: 10px 15px;
+	border-radius: 5px;
+}
+
+button {
+	background: @red500;
+	color: @white;
+	transition: .32s;
+	cursor: pointer;
+
+	*:not(:first-child) {
+		margin-left: 10px;
+	}
+
+	&:hover {
+		background: @red600;
+	}
+
+	&.secondary {
+		background: @black800;
+
+		&:hover {
+			background: @black900;
+		}
+	}
+
+	&:disabled {
+		background: @black200;
+		color: @black900;
+		cursor: default;
+	}
+}

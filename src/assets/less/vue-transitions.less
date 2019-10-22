@@ -1,0 +1,33 @@
+/* === === === === === */
+/* Slide
+/* === === === === === */
+
+.slide-leave-active,
+.slide-enter-active {
+	transition: .32s ease;
+}
+
+.slide-enter,
+.slide-leave-to, {
+	opacity: 0;
+}
+
+.slide-enter {
+	transform: translateX(20%);
+}
+
+.slide-leave-to {
+	transform: translateX(-20%);
+}
+
+/* === === === === === */
+/* File list
+/* === === === === === */
+
+.file-list-enter, .file-list-leave-to {
+	opacity: 0;
+}
+.file-list-enter-active,
+.file-list-leave-active {
+	transition: 1s;
+}

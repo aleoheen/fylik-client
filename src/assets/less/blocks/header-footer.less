@@ -1,0 +1,144 @@
+header, footer {
+	position: fixed;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 60px;
+	padding: 0 50px;
+	background: @white;
+	color: @black900;
+	z-index: 1000;
+
+	@media(max-width: 440px) {
+		padding: 0 30px;
+	}
+
+	a {
+		text-decoration: none;
+		color: @red500;
+
+		@media(hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+/* === === === === === */
+/* Header
+/* === === === === === */
+
+header {
+	border-bottom: 1px solid @black300;
+	top: 0;
+
+	h1 {
+		margin: 0;
+		font: bolder 16pt @majorFont;
+
+		@media(max-width: 580px) {
+			span {
+				display: none;
+			}
+		}
+	}
+
+	/* === === === === === */
+	/* Header buttons
+	/* === === === === === */
+
+	#header-buttons {
+		display: flex;
+
+		& > *:not(:first-child) {
+			margin-left: 10px;
+		}
+
+		&-upload {
+			@media(max-width: 680px) {
+				span {
+					display: none;
+				}
+			}
+		}
+
+		&-file {
+			display: none;
+		}
+	}
+
+	/* === === === === === */
+	/* Header progress
+	/* === === === === === */
+
+	#header-progress {
+		position: absolute;
+		left: 0;
+		bottom: -1px;
+		height: 2px;
+		transition: .32s;
+		background: @red500;
+	}
+}
+
+/* === === === === === */
+/* Footer
+/* === === === === === */
+
+footer {
+	bottom: 0;
+	border-top: 1px solid @black300;
+
+	@media(max-width: 640px) {
+		justify-content: center;
+		height: auto;
+		padding: 20px 30px;
+	}
+
+	/* === === === === === */
+	/* Footer navigation
+	/* === === === === === */
+
+	nav {
+		transform: translateX(-7px);
+
+		@media(max-width: 640px) {
+			transform: none;
+		}
+
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			li {
+				display: block;
+
+				a {
+					display: block;
+					padding: 7px 12px;
+
+					&.router-link-exact-active {
+						color: @black900;
+					}
+				}
+			}
+		}
+	}
+
+	/* === === === === === */
+	/* Footer copyright
+	/* === === === === === */
+
+	#footer-copyright {
+		@media(max-width: 640px) {
+			display: none;
+		}
+	}
+}

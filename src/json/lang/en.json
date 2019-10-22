@@ -1,0 +1,23 @@
+{
+	"language": "Language",
+	"name": "Fylik",
+	"label": "Free file sharing",
+
+	"header": {
+
+		"buttons": {
+			"upload": "Upload a file",
+			"uploading": "Uploading...",
+			"language": "Change UI language"
+		}
+	},
+
+	"footer": {
+		"nav": {
+			"home": "Files",
+			"about": "About",
+			"contacts": "Contacts"
+		},
+		"author": "Creator"
+	}
+}

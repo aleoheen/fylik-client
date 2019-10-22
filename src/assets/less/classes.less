@@ -1,0 +1,34 @@
+.items {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-gap: 100px 50px;
+	margin: 100px 0;
+
+	@media(max-width: 880px) {
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	}
+
+	&-item {
+		text-align: center;
+
+		&-icon {
+			font-size: 68px;
+		}
+
+		&-label {
+			margin-top: 20px;
+			font: italic bolder 16pt @majorFont;
+		}
+
+		&-text {
+			margin-top: 20px;
+			font: 12pt @majorFont;
+			color: @black700;
+		}
+
+		&-caption {
+			margin-top: 20px;
+			font: bold italic 14pt @majorFont;
+		}
+	}
+}

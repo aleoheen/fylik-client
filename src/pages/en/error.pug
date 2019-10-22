@@ -1,0 +1,22 @@
+#error
+	h1 Oops... That`s an error 😔
+
+	div(v-if="!eDetails.code || eDetails.code === '404'")
+		p.
+			Page you requested not found.
+
+		p.
+			Try to use site menu in bottom of the site.
+
+	div(v-else-if="eDetails.message === 'Network Error'")
+		p.
+			Sorry, but you`re offline :(
+		p.
+			Try again after you sure you have internet connection
+
+	div(v-else-if="eDetails.code && eDetails.code !== '404'")
+		p.
+			Something went wrong...
+
+		p(v-if="eDetails.message").
+			May be it shall help you: <b><code>{{eDetails.message}}</code></b>
