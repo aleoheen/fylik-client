@@ -1,9 +1,8 @@
 header, footer {
-	position: fixed;
-	left: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-shrink: 0;
 	width: 100%;
 	height: 60px;
 	padding: 0 50px;
@@ -32,8 +31,10 @@ header, footer {
 /* === === === === === */
 
 header {
-	border-bottom: 1px solid @black300;
+	position: fixed;
 	top: 0;
+	left: 0;
+	border-bottom: 1px solid @black300;
 
 	h1 {
 		margin: 0;
@@ -89,13 +90,13 @@ header {
 /* === === === === === */
 
 footer {
-	bottom: 0;
+	height: auto;
+	padding: 0 50px;
 	border-top: 1px solid @black300;
+	flex-wrap: wrap;
 
 	@media(max-width: 640px) {
 		justify-content: center;
-		height: auto;
-		padding: 20px 30px;
 	}
 
 	/* === === === === === */
@@ -103,11 +104,7 @@ footer {
 	/* === === === === === */
 
 	nav {
-		transform: translateX(-7px);
-
-		@media(max-width: 640px) {
-			transform: none;
-		}
+		padding: 14px 0;
 
 		ul {
 			display: flex;
@@ -126,6 +123,12 @@ footer {
 
 					&.router-link-exact-active {
 						color: @black900;
+					}
+				}
+
+				@media(min-width: 640px) {
+					&:first-child a {
+						padding-left: 0;
 					}
 				}
 			}

@@ -16,7 +16,6 @@
 			background: @white;
 			padding: 25px 20px;
 			text-align: center;
-			cursor: pointer;
 
 			&-icon {
 				font-size: 48px;
@@ -32,11 +31,16 @@
 				font: bold 14pt @majorFont;
 				word-wrap: break-word;
 				transition: .18s;
-			}
 
-			&:hover {
-				.file-name {
-					color: @red500;
+				a {
+					text-decoration: none;
+					transition: .2s;
+					
+					@media(hover: hover) {
+						&:hover {
+							color: @red500;
+						}
+					}
 				}
 			}
 

@@ -1,10 +1,10 @@
 <template lang="pug">
-	.file(@click="openFile")
+	.file
 		.file-icon
 			svg(:style="{fill: type.color}")
 				use(:xlink:href="require('../assets/images/icons/files.svg') + '#' + type.type")
 
-		.file-name {{file.name}}
+		.file-name: a(:href="file.link", target="_blank") {{file.name}}
 		.file-size {{file.size | toPrettySize}}
 
 		.file-term(:style="{background: type.color, width: `${term}%`}")
@@ -29,12 +29,6 @@
 		data() {
 			return {
 				term: 100
-			}
-		},
-
-		methods: {
-			openFile() {
-				window.open(this.file.link);
 			}
 		},
 

@@ -1,10 +1,16 @@
 main {
-	margin: auto;
+	display: flex;
 	width: 100%;
 	max-width: 960px;
+	margin-bottom: 50px;
 	font: 1em/1.45em @majorFont;
 	color: @black900;
-	padding: 0 30px;
+	padding: 0 50px;
+
+	& > div {
+		margin: auto;
+		width: 100%;
+	}
 
 	code {
 		user-select: text;

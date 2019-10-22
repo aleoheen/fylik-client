@@ -6,8 +6,11 @@
 		//- Header
 		//- === === === === ===
 
+		div
+
 		header
-			h1 {{lang.name}} <span>- {{lang.label}}</span>
+			h1(@click="$router.push('/')").
+				{{lang.name}} <span>- {{lang.label}}</span>
 
 			//- === === === === ===
 			//- Header buttons

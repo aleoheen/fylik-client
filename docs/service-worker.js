@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.697f7550cbe26cc5537d9430bafcadd1.js"
+  "/precache-manifest.b6180c71d26b17f3d27fd3016b72bd29.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "fylik-client"});
